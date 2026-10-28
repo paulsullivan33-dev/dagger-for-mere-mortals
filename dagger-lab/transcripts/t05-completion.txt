@@ -1,0 +1,6 @@
+$ dagger completion bash | head -5
+# bash completion V2 for dagger                               -*- shell-script -*-
+
+__dagger_debug()
+{
+    if [[ -n ${BASH_COMP_DEBUG_FILE-} ]]; then

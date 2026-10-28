@@ -1,0 +1,2 @@
+$ sha256sum -c checksums.txt  # (filtered to the linux_amd64 line)
+dagger_v0.21.11_linux_amd64.tar.gz: OK

@@ -1,0 +1,44 @@
+Dagger — the distilled commands
+====================================================================
+Commands marked [engine] need a running engine; on this guide's
+lab machine the engine could not start, so those are the
+documented forms. The rest were run in the lab.
+
+FIRST CONTACT (chapters 3-4)
+--------------------------------------------------------------------
+  curl -fsSL https://dl.dagger.io/dagger/install.sh | BIN_DIR=$HOME/.local/bin sh
+                                   # the project's install script
+  # — or the lab's verified route:
+  curl -LO https://github.com/dagger/dagger/releases/download/v0.21.11/dagger_v0.21.11_linux_amd64.tar.gz
+  curl -LO https://github.com/dagger/dagger/releases/download/v0.21.11/checksums.txt
+  grep linux_amd64.tar.gz checksums.txt | sha256sum -c -
+  tar -xzf dagger_v0.21.11_linux_amd64.tar.gz dagger
+
+  dagger version                   # CLI + paired engine image
+  dagger --help                    # the command map
+  docker run --rm hello-world      # the floor test: can this
+                                   # machine run containers at all?
+
+THE ENGINE (chapters 2-3, 14)
+--------------------------------------------------------------------
+  docker ps -a                     # look for dagger-engine-<v>
+  docker start dagger-engine-v0.21.11
+                                   # starts it by hand; on a sick
+                                   # runtime, shows the plain error
+  docker stop dagger-engine-v0.21.11
+  docker rm dagger-engine-v0.21.11 # removes engine AND its cache
+
+MODULES (chapters 4-6)
+--------------------------------------------------------------------
+  dagger init --sdk=python         # [engine] a new module here
+  dagger init --sdk=go my-pipeline # [engine] in a new folder
+  dagger functions                 # [engine] list the functions
+  dagger config                    # [engine] read dagger.json's
+                                   # interpreted configuration
+  dagger develop                   # [engine] (re)install the SDK
+  dagger call test --source=.      # [engine] run a function
+  dagger call container --source=. export --path=./image.tar
+                                   # [engine] build + export
+  dagger -c 'container'            # [engine] Dagger Shell, one shot
+  dagger completion bash           # prints the completion script;
+                                   # no engine needed

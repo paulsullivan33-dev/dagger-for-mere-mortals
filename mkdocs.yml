@@ -1,0 +1,27 @@
+site_name: Dagger for Mere Mortals
+site_description: Pipelines as code instead of YAML. Writing your build, test and release steps as functions in a real programming language, running them in containers through one engine, so the same pipeline runs on your laptop and on any CI server, with the limits stated plainly.
+site_url: https://paulsullivan33-dev.github.io/dagger-for-mere-mortals/
+copyright: 'Part of <a href="https://paulsullivan33-dev.github.io/mere-mortals/">For Mere Mortals</a> · Text <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>, code MIT'
+
+# Guides live at the repo root (nice for GitHub browsing).
+# The deploy workflow copies them into docs/ before building.
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - What Dagger Is: what-dagger-is.md
+  - The Moving Parts: the-moving-parts.md
+  - Installing Dagger: installing-dagger.md
+  - Your First Module: your-first-module.md
+  - Writing Functions: writing-functions.md
+  - Calling Functions: calling-functions.md
+  - Pipelines in CI: pipelines-in-ci.md
+  - Caching and Speed: caching-and-speed.md
+  - Secrets and Services: secrets-and-services.md
+  - Recipes: recipes.md
+  - The Neighbours: the-neighbours.md
+  - Limits: limits.md
+  - Troubleshooting: troubleshooting.md
+  - Glossary: glossary.md
+  - Writing Criteria: criteria.md

@@ -1,0 +1,540 @@
+$ dagger core version
+1   : connect
+1   : [0.1s] | cloud url=https://dagger.cloud/traces/setup
+2   : ┆ starting engine
+3   : ┆ ┆ create container
+4   : ┆ ┆ ┆ exec docker ps -a --format {{.Names}}
+4   : ┆ ┆ ┆ exec docker ps -a --format {{.Names}} DONE [0.1s]
+5   : ┆ ┆ ┆ exec docker pull registry.dagger.io/engine:v0.21.11
+5   : ┆ ┆ ┆ [9.4s] | v0.21.11: Pulling from engine
+5   : ┆ ┆ ┆ [9.5s] | d99ce0823b1d: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 418eb8055bef: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 9a35bd380883: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | f74ae34d7e8b: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | e191cd7cfbd3: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 48df7383e1e6: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | e6c35c2eb5d6: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 6db04961a7ab: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 6b8bb42e3a3e: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | a3149977bdc1: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 7a3fea577f21: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 8a572cc71051: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 1fd0ada80b98: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 312f86059ef6: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 0601eb4a43e4: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 2c41338a8cb5: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | e80b0ca4bf27: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 20673f36deda: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 24bc65bfc220: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 7684806420ea: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 23640ea68399: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 2bf0c3f322ac: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | b5feac6a2892: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | b76db2adbfe6: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | dd1abd685538: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | f4f36b3a9f8b: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 43d30817d066: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 73e2d37017ee: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 1cce21a828c9: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | a5467c164948: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | da51ee37630e: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | bd0766e0c6b8: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | a2d0c30119e0: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | a2bb9e5ef018: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 4ad2b9679ae6: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 1fa670388b73: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 5917b013c8eb: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 7aaa625663f2: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 4c16e7c58549: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | c641537fc386: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 8dc72b51c9e9: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | a4782f2d2817: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 470f1ecfdabf: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | cff9f29e0fc3: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 9fb9b7468923: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | c9f97f2c03bd: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | aa4df5a89e7b: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | da42f07fe6ce: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 5a22752360d6: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 9dcebd6670d4: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 4b547fd1abb4: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 952d1d3cf0ea: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | c25a890d22c0: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | c78171d4b1f0: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | b8a919f6392c: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | fe75a6d637a0: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 9bc532ebd3af: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | fd2f6ff4388b: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | da1cfe517e4e: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 57a96e2cf2b5: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 250e64707cac: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 75e8d69b1628: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | ab8ffc3e37d0: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 3b4716e7b741: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 6eb120d3bc4a: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | d8f1b7b1b424: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | b4fe3f7d8a84: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 15ca1c445cc8: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 50d60dc44340: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | cb23806354bc: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | cf5499850f3f: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 9efebd4daf04: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | f29c650e6ebc: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | ec0b76bb32db: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | ff7d47aedde2: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 6ebe8c2cb31b: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 44dba3295edf: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 4f4fb700ef54: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | fd83f459f1d6: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | e27de3fafe89: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 3250e7cfba26: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 14b85baf55e5: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 0d7da9d83ddf: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 652c280a1f74: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 4adec646e303: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 68dc2e3a0a92: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | b1ce16724c32: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | e4a89674f7a0: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 63e9bd9d6dc4: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 2726a37e8e68: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 242e241769f0: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 0ef0262b9cb5: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 862ab9ed753a: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | a32c0bec3734: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 7dd90edbcd27: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | bfdfd57d1642: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 51fecc4163b1: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 292c55ab2284: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 7b82ef34ccf9: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 02b8253c97dd: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | a3522b9567bb: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | bf3b5050a95a: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | a3522b9567bb: Waiting
+5   : ┆ ┆ ┆ [9.5s] | fd2f6ff4388b: Waiting
+5   : ┆ ┆ ┆ [9.5s] | da1cfe517e4e: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 57a96e2cf2b5: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 250e64707cac: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 75e8d69b1628: Waiting
+5   : ┆ ┆ ┆ [9.5s] | ab8ffc3e37d0: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 3b4716e7b741: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 6eb120d3bc4a: Waiting
+5   : ┆ ┆ ┆ [9.5s] | d8f1b7b1b424: Waiting
+5   : ┆ ┆ ┆ [9.5s] | b4fe3f7d8a84: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 15ca1c445cc8: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 50d60dc44340: Waiting
+5   : ┆ ┆ ┆ [9.5s] | cb23806354bc: Waiting
+5   : ┆ ┆ ┆ [9.5s] | cf5499850f3f: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 9efebd4daf04: Waiting
+5   : ┆ ┆ ┆ [9.5s] | f29c650e6ebc: Waiting
+5   : ┆ ┆ ┆ [9.5s] | ec0b76bb32db: Waiting
+5   : ┆ ┆ ┆ [9.5s] | ff7d47aedde2: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 6ebe8c2cb31b: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 44dba3295edf: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 4f4fb700ef54: Waiting
+5   : ┆ ┆ ┆ [9.5s] | fd83f459f1d6: Waiting
+5   : ┆ ┆ ┆ [9.5s] | e27de3fafe89: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 3250e7cfba26: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 14b85baf55e5: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 0d7da9d83ddf: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 652c280a1f74: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 4adec646e303: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 68dc2e3a0a92: Waiting
+5   : ┆ ┆ ┆ [9.5s] | b1ce16724c32: Waiting
+5   : ┆ ┆ ┆ [9.5s] | e4a89674f7a0: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 63e9bd9d6dc4: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 2726a37e8e68: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 242e241769f0: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 0ef0262b9cb5: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 862ab9ed753a: Waiting
+5   : ┆ ┆ ┆ [9.5s] | a32c0bec3734: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 7dd90edbcd27: Waiting
+5   : ┆ ┆ ┆ [9.5s] | bfdfd57d1642: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 51fecc4163b1: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 292c55ab2284: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 7b82ef34ccf9: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 02b8253c97dd: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 1cce21a828c9: Waiting
+5   : ┆ ┆ ┆ [9.5s] | a5467c164948: Waiting
+5   : ┆ ┆ ┆ [9.5s] | da51ee37630e: Waiting
+5   : ┆ ┆ ┆ [9.5s] | bd0766e0c6b8: Waiting
+5   : ┆ ┆ ┆ [9.5s] | a2d0c30119e0: Waiting
+5   : ┆ ┆ ┆ [9.5s] | a2bb9e5ef018: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 4ad2b9679ae6: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 1fa670388b73: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 5917b013c8eb: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 7aaa625663f2: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 4c16e7c58549: Waiting
+5   : ┆ ┆ ┆ [9.5s] | c641537fc386: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 8dc72b51c9e9: Waiting
+5   : ┆ ┆ ┆ [9.5s] | a4782f2d2817: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 470f1ecfdabf: Waiting
+5   : ┆ ┆ ┆ [9.5s] | cff9f29e0fc3: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 9fb9b7468923: Waiting
+5   : ┆ ┆ ┆ [9.5s] | c9f97f2c03bd: Waiting
+5   : ┆ ┆ ┆ [9.5s] | aa4df5a89e7b: Waiting
+5   : ┆ ┆ ┆ [9.5s] | da42f07fe6ce: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 5a22752360d6: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 9dcebd6670d4: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 4b547fd1abb4: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 952d1d3cf0ea: Waiting
+5   : ┆ ┆ ┆ [9.5s] | c25a890d22c0: Waiting
+5   : ┆ ┆ ┆ [9.5s] | c78171d4b1f0: Waiting
+5   : ┆ ┆ ┆ [9.5s] | b8a919f6392c: Waiting
+5   : ┆ ┆ ┆ [9.5s] | fe75a6d637a0: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 9bc532ebd3af: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 312f86059ef6: Waiting
+5   : ┆ ┆ ┆ [9.5s] | f74ae34d7e8b: Waiting
+5   : ┆ ┆ ┆ [9.5s] | e191cd7cfbd3: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 48df7383e1e6: Waiting
+5   : ┆ ┆ ┆ [9.5s] | e6c35c2eb5d6: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 6db04961a7ab: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 6b8bb42e3a3e: Waiting
+5   : ┆ ┆ ┆ [9.5s] | a3149977bdc1: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 7a3fea577f21: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 8a572cc71051: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 1fd0ada80b98: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 23640ea68399: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 0601eb4a43e4: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 2c41338a8cb5: Waiting
+5   : ┆ ┆ ┆ [9.5s] | e80b0ca4bf27: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 20673f36deda: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 24bc65bfc220: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 7684806420ea: Waiting
+5   : ┆ ┆ ┆ [9.5s] | dd1abd685538: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 2bf0c3f322ac: Waiting
+5   : ┆ ┆ ┆ [9.5s] | b5feac6a2892: Waiting
+5   : ┆ ┆ ┆ [9.5s] | b76db2adbfe6: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 43d30817d066: Waiting
+5   : ┆ ┆ ┆ [9.5s] | f4f36b3a9f8b: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 73e2d37017ee: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 62f05d791015: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | bf3b5050a95a: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 42e45b79dc65: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | f59a505a6386: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 0202c85c965d: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 8822f3a11e4c: Pulling fs layer
+5   : ┆ ┆ ┆ [9.5s] | 8822f3a11e4c: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 62f05d791015: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 42e45b79dc65: Waiting
+5   : ┆ ┆ ┆ [9.5s] | f59a505a6386: Waiting
+5   : ┆ ┆ ┆ [9.5s] | 0202c85c965d: Waiting
+5   : ┆ ┆ ┆ [15.6s] | d99ce0823b1d: Verifying Checksum
+5   : ┆ ┆ ┆ [15.6s] | d99ce0823b1d: Download complete
+5   : ┆ ┆ ┆ [15.6s] | d99ce0823b1d: Pull complete
+5   : ┆ ┆ ┆ [15.7s] | 9a35bd380883: Verifying Checksum
+5   : ┆ ┆ ┆ [15.7s] | 9a35bd380883: Download complete
+5   : ┆ ┆ ┆ [15.8s] | 418eb8055bef: Verifying Checksum
+5   : ┆ ┆ ┆ [15.8s] | 418eb8055bef: Download complete
+5   : ┆ ┆ ┆ [15.8s] | 418eb8055bef: Pull complete
+5   : ┆ ┆ ┆ [15.9s] | 9a35bd380883: Pull complete
+5   : ┆ ┆ ┆ [16.6s] | f74ae34d7e8b: Verifying Checksum
+5   : ┆ ┆ ┆ [16.6s] | f74ae34d7e8b: Download complete
+5   : ┆ ┆ ┆ [16.6s] | f74ae34d7e8b: Pull complete
+5   : ┆ ┆ ┆ [16.8s] | 48df7383e1e6: Verifying Checksum
+5   : ┆ ┆ ┆ [16.8s] | 48df7383e1e6: Download complete
+5   : ┆ ┆ ┆ [17.7s] | e6c35c2eb5d6: Verifying Checksum
+5   : ┆ ┆ ┆ [17.7s] | e6c35c2eb5d6: Download complete
+5   : ┆ ┆ ┆ [17.7s] | 6db04961a7ab: Verifying Checksum
+5   : ┆ ┆ ┆ [17.7s] | 6db04961a7ab: Download complete
+5   : ┆ ┆ ┆ [18.0s] | e191cd7cfbd3: Verifying Checksum
+5   : ┆ ┆ ┆ [18.2s] | e191cd7cfbd3: Pull complete
+5   : ┆ ┆ ┆ [18.3s] | 48df7383e1e6: Pull complete
+5   : ┆ ┆ ┆ [18.3s] | e6c35c2eb5d6: Pull complete
+5   : ┆ ┆ ┆ [18.3s] | 6db04961a7ab: Pull complete
+5   : ┆ ┆ ┆ [18.7s] | a3149977bdc1: Verifying Checksum
+5   : ┆ ┆ ┆ [18.7s] | a3149977bdc1: Download complete
+5   : ┆ ┆ ┆ [18.9s] | 6b8bb42e3a3e: Verifying Checksum
+5   : ┆ ┆ ┆ [18.9s] | 6b8bb42e3a3e: Download complete
+5   : ┆ ┆ ┆ [18.9s] | 6b8bb42e3a3e: Pull complete
+5   : ┆ ┆ ┆ [19.0s] | a3149977bdc1: Pull complete
+5   : ┆ ┆ ┆ [19.4s] | 7a3fea577f21: Download complete
+5   : ┆ ┆ ┆ [19.5s] | 7a3fea577f21: Pull complete
+5   : ┆ ┆ ┆ [20.2s] | 8a572cc71051: Download complete
+5   : ┆ ┆ ┆ [20.2s] | 8a572cc71051: Pull complete
+5   : ┆ ┆ ┆ [20.5s] | 1fd0ada80b98: Download complete
+5   : ┆ ┆ ┆ [20.6s] | 1fd0ada80b98: Pull complete
+5   : ┆ ┆ ┆ [20.7s] | 312f86059ef6: Download complete
+5   : ┆ ┆ ┆ [20.7s] | 312f86059ef6: Pull complete
+5   : ┆ ┆ ┆ [22.1s] | e80b0ca4bf27: Verifying Checksum
+5   : ┆ ┆ ┆ [22.1s] | e80b0ca4bf27: Download complete
+5   : ┆ ┆ ┆ [22.2s] | 2c41338a8cb5: Verifying Checksum
+5   : ┆ ┆ ┆ [22.2s] | 2c41338a8cb5: Download complete
+5   : ┆ ┆ ┆ [22.7s] | 0601eb4a43e4: Verifying Checksum
+5   : ┆ ┆ ┆ [22.7s] | 0601eb4a43e4: Download complete
+5   : ┆ ┆ ┆ [22.9s] | 0601eb4a43e4: Pull complete
+5   : ┆ ┆ ┆ [23.1s] | 2c41338a8cb5: Pull complete
+5   : ┆ ┆ ┆ [23.1s] | e80b0ca4bf27: Pull complete
+5   : ┆ ┆ ┆ [23.7s] | 24bc65bfc220: Verifying Checksum
+5   : ┆ ┆ ┆ [23.7s] | 24bc65bfc220: Download complete
+5   : ┆ ┆ ┆ [23.8s] | 20673f36deda: Verifying Checksum
+5   : ┆ ┆ ┆ [23.8s] | 20673f36deda: Download complete
+5   : ┆ ┆ ┆ [23.9s] | 20673f36deda: Pull complete
+5   : ┆ ┆ ┆ [24.0s] | 24bc65bfc220: Pull complete
+5   : ┆ ┆ ┆ [24.6s] | 7684806420ea: Verifying Checksum
+5   : ┆ ┆ ┆ [24.6s] | 7684806420ea: Download complete
+5   : ┆ ┆ ┆ [24.7s] | 2bf0c3f322ac: Verifying Checksum
+5   : ┆ ┆ ┆ [24.7s] | 2bf0c3f322ac: Download complete
+5   : ┆ ┆ ┆ [24.8s] | 7684806420ea: Pull complete
+5   : ┆ ┆ ┆ [24.9s] | 23640ea68399: Verifying Checksum
+5   : ┆ ┆ ┆ [24.9s] | 23640ea68399: Download complete
+5   : ┆ ┆ ┆ [25.1s] | 23640ea68399: Pull complete
+5   : ┆ ┆ ┆ [25.2s] | 2bf0c3f322ac: Pull complete
+5   : ┆ ┆ ┆ [25.8s] | b5feac6a2892: Verifying Checksum
+5   : ┆ ┆ ┆ [25.8s] | b5feac6a2892: Download complete
+5   : ┆ ┆ ┆ [25.9s] | b5feac6a2892: Pull complete
+5   : ┆ ┆ ┆ [26.0s] | b76db2adbfe6: Download complete
+5   : ┆ ┆ ┆ [26.1s] | b76db2adbfe6: Pull complete
+5   : ┆ ┆ ┆ [26.2s] | dd1abd685538: Verifying Checksum
+5   : ┆ ┆ ┆ [26.2s] | dd1abd685538: Download complete
+5   : ┆ ┆ ┆ [26.5s] | dd1abd685538: Pull complete
+5   : ┆ ┆ ┆ [27.3s] | f4f36b3a9f8b: Download complete
+5   : ┆ ┆ ┆ [27.4s] | 73e2d37017ee: Verifying Checksum
+5   : ┆ ┆ ┆ [27.4s] | 73e2d37017ee: Download complete
+5   : ┆ ┆ ┆ [27.5s] | f4f36b3a9f8b: Pull complete
+5   : ┆ ┆ ┆ [27.5s] | 43d30817d066: Verifying Checksum
+5   : ┆ ┆ ┆ [27.5s] | 43d30817d066: Download complete
+5   : ┆ ┆ ┆ [27.8s] | 43d30817d066: Pull complete
+5   : ┆ ┆ ┆ [28.0s] | 73e2d37017ee: Pull complete
+5   : ┆ ┆ ┆ [28.6s] | a5467c164948: Verifying Checksum
+5   : ┆ ┆ ┆ [28.6s] | a5467c164948: Download complete
+5   : ┆ ┆ ┆ [28.8s] | 1cce21a828c9: Verifying Checksum
+5   : ┆ ┆ ┆ [28.8s] | 1cce21a828c9: Download complete
+5   : ┆ ┆ ┆ [29.0s] | 1cce21a828c9: Pull complete
+5   : ┆ ┆ ┆ [29.2s] | a5467c164948: Pull complete
+5   : ┆ ┆ ┆ [29.3s] | da51ee37630e: Verifying Checksum
+5   : ┆ ┆ ┆ [29.3s] | da51ee37630e: Download complete
+5   : ┆ ┆ ┆ [29.5s] | da51ee37630e: Pull complete
+5   : ┆ ┆ ┆ [29.5s] | bd0766e0c6b8: Verifying Checksum
+5   : ┆ ┆ ┆ [29.5s] | bd0766e0c6b8: Download complete
+5   : ┆ ┆ ┆ [29.7s] | bd0766e0c6b8: Pull complete
+5   : ┆ ┆ ┆ [30.3s] | a2d0c30119e0: Verifying Checksum
+5   : ┆ ┆ ┆ [30.3s] | a2d0c30119e0: Download complete
+5   : ┆ ┆ ┆ [30.6s] | a2d0c30119e0: Pull complete
+5   : ┆ ┆ ┆ [31.3s] | a2bb9e5ef018: Verifying Checksum
+5   : ┆ ┆ ┆ [31.3s] | a2bb9e5ef018: Download complete
+5   : ┆ ┆ ┆ [31.5s] | 4ad2b9679ae6: Verifying Checksum
+5   : ┆ ┆ ┆ [31.5s] | 4ad2b9679ae6: Download complete
+5   : ┆ ┆ ┆ [31.7s] | a2bb9e5ef018: Pull complete
+5   : ┆ ┆ ┆ [32.0s] | 4ad2b9679ae6: Pull complete
+5   : ┆ ┆ ┆ [32.1s] | 1fa670388b73: Verifying Checksum
+5   : ┆ ┆ ┆ [32.1s] | 1fa670388b73: Download complete
+5   : ┆ ┆ ┆ [32.5s] | 1fa670388b73: Pull complete
+5   : ┆ ┆ ┆ [33.1s] | 7aaa625663f2: Verifying Checksum
+5   : ┆ ┆ ┆ [33.1s] | 7aaa625663f2: Download complete
+5   : ┆ ┆ ┆ [33.2s] | 5917b013c8eb: Verifying Checksum
+5   : ┆ ┆ ┆ [33.2s] | 5917b013c8eb: Download complete
+5   : ┆ ┆ ┆ [33.6s] | 5917b013c8eb: Pull complete
+5   : ┆ ┆ ┆ [33.8s] | 7aaa625663f2: Pull complete
+5   : ┆ ┆ ┆ [33.9s] | 4c16e7c58549: Verifying Checksum
+5   : ┆ ┆ ┆ [33.9s] | 4c16e7c58549: Download complete
+5   : ┆ ┆ ┆ [34.3s] | 4c16e7c58549: Pull complete
+5   : ┆ ┆ ┆ [34.8s] | c641537fc386: Download complete
+5   : ┆ ┆ ┆ [34.9s] | c641537fc386: Pull complete
+5   : ┆ ┆ ┆ [35.3s] | 8dc72b51c9e9: Download complete
+5   : ┆ ┆ ┆ [35.5s] | 8dc72b51c9e9: Pull complete
+5   : ┆ ┆ ┆ [35.6s] | a4782f2d2817: Download complete
+5   : ┆ ┆ ┆ [35.6s] | 470f1ecfdabf: Verifying Checksum
+5   : ┆ ┆ ┆ [35.6s] | 470f1ecfdabf: Download complete
+5   : ┆ ┆ ┆ [35.8s] | a4782f2d2817: Pull complete
+5   : ┆ ┆ ┆ [36.1s] | 470f1ecfdabf: Pull complete
+5   : ┆ ┆ ┆ [36.8s] | 9fb9b7468923: Verifying Checksum
+5   : ┆ ┆ ┆ [36.8s] | 9fb9b7468923: Download complete
+5   : ┆ ┆ ┆ [37.0s] | cff9f29e0fc3: Verifying Checksum
+5   : ┆ ┆ ┆ [37.0s] | cff9f29e0fc3: Download complete
+5   : ┆ ┆ ┆ [37.1s] | cff9f29e0fc3: Pull complete
+5   : ┆ ┆ ┆ [37.2s] | c9f97f2c03bd: Verifying Checksum
+5   : ┆ ┆ ┆ [37.2s] | c9f97f2c03bd: Download complete
+5   : ┆ ┆ ┆ [37.4s] | 9fb9b7468923: Pull complete
+5   : ┆ ┆ ┆ [37.7s] | c9f97f2c03bd: Pull complete
+5   : ┆ ┆ ┆ [37.9s] | aa4df5a89e7b: Verifying Checksum
+5   : ┆ ┆ ┆ [37.9s] | aa4df5a89e7b: Download complete
+5   : ┆ ┆ ┆ [38.1s] | aa4df5a89e7b: Pull complete
+5   : ┆ ┆ ┆ [38.9s] | da42f07fe6ce: Download complete
+5   : ┆ ┆ ┆ [39.0s] | 9dcebd6670d4: Verifying Checksum
+5   : ┆ ┆ ┆ [39.0s] | 9dcebd6670d4: Download complete
+5   : ┆ ┆ ┆ [39.2s] | da42f07fe6ce: Pull complete
+5   : ┆ ┆ ┆ [39.4s] | 5a22752360d6: Verifying Checksum
+5   : ┆ ┆ ┆ [39.7s] | 5a22752360d6: Pull complete
+5   : ┆ ┆ ┆ [40.1s] | 9dcebd6670d4: Pull complete
+5   : ┆ ┆ ┆ [40.4s] | 952d1d3cf0ea: Verifying Checksum
+5   : ┆ ┆ ┆ [40.4s] | 952d1d3cf0ea: Download complete
+5   : ┆ ┆ ┆ [40.4s] | 4b547fd1abb4: Verifying Checksum
+5   : ┆ ┆ ┆ [40.4s] | 4b547fd1abb4: Download complete
+5   : ┆ ┆ ┆ [40.7s] | 4b547fd1abb4: Pull complete
+5   : ┆ ┆ ┆ [40.8s] | 952d1d3cf0ea: Pull complete
+5   : ┆ ┆ ┆ [41.4s] | c78171d4b1f0: Download complete
+5   : ┆ ┆ ┆ [42.2s] | fe75a6d637a0: Verifying Checksum
+5   : ┆ ┆ ┆ [42.2s] | fe75a6d637a0: Download complete
+5   : ┆ ┆ ┆ [42.3s] | b8a919f6392c: Verifying Checksum
+5   : ┆ ┆ ┆ [42.3s] | b8a919f6392c: Download complete
+5   : ┆ ┆ ┆ [42.5s] | c25a890d22c0: Verifying Checksum
+5   : ┆ ┆ ┆ [42.5s] | c25a890d22c0: Download complete
+5   : ┆ ┆ ┆ [43.2s] | c25a890d22c0: Pull complete
+5   : ┆ ┆ ┆ [43.7s] | c78171d4b1f0: Pull complete
+5   : ┆ ┆ ┆ [43.7s] | 9bc532ebd3af: Download complete
+5   : ┆ ┆ ┆ [43.9s] | fd2f6ff4388b: Verifying Checksum
+5   : ┆ ┆ ┆ [43.9s] | fd2f6ff4388b: Download complete
+5   : ┆ ┆ ┆ [44.0s] | b8a919f6392c: Pull complete
+5   : ┆ ┆ ┆ [44.3s] | fe75a6d637a0: Pull complete
+5   : ┆ ┆ ┆ [44.6s] | 9bc532ebd3af: Pull complete
+5   : ┆ ┆ ┆ [44.9s] | fd2f6ff4388b: Pull complete
+5   : ┆ ┆ ┆ [45.0s] | 57a96e2cf2b5: Verifying Checksum
+5   : ┆ ┆ ┆ [45.0s] | 57a96e2cf2b5: Download complete
+5   : ┆ ┆ ┆ [45.1s] | da1cfe517e4e: Verifying Checksum
+5   : ┆ ┆ ┆ [45.1s] | da1cfe517e4e: Download complete
+5   : ┆ ┆ ┆ [45.2s] | 250e64707cac: Verifying Checksum
+5   : ┆ ┆ ┆ [45.2s] | 250e64707cac: Download complete
+5   : ┆ ┆ ┆ [45.5s] | da1cfe517e4e: Pull complete
+5   : ┆ ┆ ┆ [45.7s] | 57a96e2cf2b5: Pull complete
+5   : ┆ ┆ ┆ [46.0s] | 250e64707cac: Pull complete
+5   : ┆ ┆ ┆ [46.6s] | 75e8d69b1628: Verifying Checksum
+5   : ┆ ┆ ┆ [46.6s] | 75e8d69b1628: Download complete
+5   : ┆ ┆ ┆ [46.9s] | ab8ffc3e37d0: Verifying Checksum
+5   : ┆ ┆ ┆ [46.9s] | ab8ffc3e37d0: Download complete
+5   : ┆ ┆ ┆ [47.0s] | 75e8d69b1628: Pull complete
+5   : ┆ ┆ ┆ [47.3s] | 3b4716e7b741: Verifying Checksum
+5   : ┆ ┆ ┆ [47.3s] | 3b4716e7b741: Download complete
+5   : ┆ ┆ ┆ [47.3s] | ab8ffc3e37d0: Pull complete
+5   : ┆ ┆ ┆ [48.0s] | 3b4716e7b741: Pull complete
+5   : ┆ ┆ ┆ [48.3s] | 6eb120d3bc4a: Verifying Checksum
+5   : ┆ ┆ ┆ [48.3s] | 6eb120d3bc4a: Download complete
+5   : ┆ ┆ ┆ [48.5s] | d8f1b7b1b424: Verifying Checksum
+5   : ┆ ┆ ┆ [48.5s] | d8f1b7b1b424: Download complete
+5   : ┆ ┆ ┆ [48.6s] | 6eb120d3bc4a: Pull complete
+5   : ┆ ┆ ┆ [48.9s] | d8f1b7b1b424: Pull complete
+5   : ┆ ┆ ┆ [49.0s] | b4fe3f7d8a84: Download complete
+5   : ┆ ┆ ┆ [49.4s] | b4fe3f7d8a84: Pull complete
+5   : ┆ ┆ ┆ [49.8s] | 15ca1c445cc8: Verifying Checksum
+5   : ┆ ┆ ┆ [49.8s] | 15ca1c445cc8: Download complete
+5   : ┆ ┆ ┆ [50.0s] | 50d60dc44340: Verifying Checksum
+5   : ┆ ┆ ┆ [50.0s] | 50d60dc44340: Download complete
+5   : ┆ ┆ ┆ [50.2s] | 15ca1c445cc8: Pull complete
+5   : ┆ ┆ ┆ [50.5s] | 50d60dc44340: Pull complete
+5   : ┆ ┆ ┆ [51.1s] | cf5499850f3f: Download complete
+5   : ┆ ┆ ┆ [51.2s] | cb23806354bc: Download complete
+5   : ┆ ┆ ┆ [51.4s] | 9efebd4daf04: Verifying Checksum
+5   : ┆ ┆ ┆ [51.4s] | 9efebd4daf04: Download complete
+5   : ┆ ┆ ┆ [51.7s] | cb23806354bc: Pull complete
+5   : ┆ ┆ ┆ [52.2s] | cf5499850f3f: Pull complete
+5   : ┆ ┆ ┆ [52.6s] | 9efebd4daf04: Pull complete
+5   : ┆ ┆ ┆ [52.7s] | ec0b76bb32db: Verifying Checksum
+5   : ┆ ┆ ┆ [52.7s] | ec0b76bb32db: Download complete
+5   : ┆ ┆ ┆ [52.9s] | f29c650e6ebc: Verifying Checksum
+5   : ┆ ┆ ┆ [52.9s] | f29c650e6ebc: Download complete
+5   : ┆ ┆ ┆ [53.2s] | ff7d47aedde2: Verifying Checksum
+5   : ┆ ┆ ┆ [53.2s] | ff7d47aedde2: Download complete
+5   : ┆ ┆ ┆ [53.5s] | f29c650e6ebc: Pull complete
+5   : ┆ ┆ ┆ [54.6s] | ec0b76bb32db: Pull complete
+5   : ┆ ┆ ┆ [54.8s] | 4f4fb700ef54: Verifying Checksum
+5   : ┆ ┆ ┆ [54.8s] | 4f4fb700ef54: Download complete
+5   : ┆ ┆ ┆ [55.6s] | ff7d47aedde2: Pull complete
+5   : ┆ ┆ ┆ [55.6s] | fd83f459f1d6: Download complete
+5   : ┆ ┆ ┆ [56.2s] | 44dba3295edf: Verifying Checksum
+5   : ┆ ┆ ┆ [56.2s] | 44dba3295edf: Download complete
+5   : ┆ ┆ ┆ [56.4s] | 6ebe8c2cb31b: Verifying Checksum
+5   : ┆ ┆ ┆ [56.4s] | 6ebe8c2cb31b: Download complete
+5   : ┆ ┆ ┆ [57.3s] | 3250e7cfba26: Verifying Checksum
+5   : ┆ ┆ ┆ [57.3s] | 3250e7cfba26: Download complete
+5   : ┆ ┆ ┆ [57.7s] | 6ebe8c2cb31b: Pull complete
+5   : ┆ ┆ ┆ [58.6s] | 44dba3295edf: Pull complete
+5   : ┆ ┆ ┆ [59.4s] | 4f4fb700ef54: Pull complete
+5   : ┆ ┆ ┆ [59.8s] | fd83f459f1d6: Pull complete
+5   : ┆ ┆ ┆ [60.0s] | 0d7da9d83ddf: Verifying Checksum
+5   : ┆ ┆ ┆ [60.0s] | 0d7da9d83ddf: Download complete
+5   : ┆ ┆ ┆ [1m0s] | 14b85baf55e5: Verifying Checksum
+5   : ┆ ┆ ┆ [1m0s] | 14b85baf55e5: Download complete
+5   : ┆ ┆ ┆ [1m12s] | 652c280a1f74: Verifying Checksum
+5   : ┆ ┆ ┆ [1m12s] | 652c280a1f74: Download complete
+5   : ┆ ┆ ┆ [1m13s] | 68dc2e3a0a92: Verifying Checksum
+5   : ┆ ┆ ┆ [1m13s] | 68dc2e3a0a92: Download complete
+5   : ┆ ┆ ┆ [1m14s] | 4adec646e303: Verifying Checksum
+5   : ┆ ┆ ┆ [1m14s] | 4adec646e303: Download complete
+5   : ┆ ┆ ┆ [1m14s] | e27de3fafe89: Verifying Checksum
+5   : ┆ ┆ ┆ [1m14s] | e27de3fafe89: Download complete
+5   : ┆ ┆ ┆ [1m15s] | b1ce16724c32: Verifying Checksum
+5   : ┆ ┆ ┆ [1m15s] | b1ce16724c32: Download complete
+5   : ┆ ┆ ┆ [1m17s] | e27de3fafe89: Pull complete
+5   : ┆ ┆ ┆ [1m17s] | 3250e7cfba26: Pull complete
+5   : ┆ ┆ ┆ [1m17s] | e4a89674f7a0: Download complete
+5   : ┆ ┆ ┆ [1m18s] | 14b85baf55e5: Pull complete
+5   : ┆ ┆ ┆ [1m18s] | 2726a37e8e68: Verifying Checksum
+5   : ┆ ┆ ┆ [1m18s] | 2726a37e8e68: Download complete
+5   : ┆ ┆ ┆ [1m18s] | 0d7da9d83ddf: Pull complete
+5   : ┆ ┆ ┆ [1m18s] | 63e9bd9d6dc4: Verifying Checksum
+5   : ┆ ┆ ┆ [1m18s] | 63e9bd9d6dc4: Download complete
+5   : ┆ ┆ ┆ [1m19s] | 652c280a1f74: Pull complete
+5   : ┆ ┆ ┆ [1m19s] | 242e241769f0: Verifying Checksum
+5   : ┆ ┆ ┆ [1m19s] | 242e241769f0: Download complete
+5   : ┆ ┆ ┆ [1m20s] | 4adec646e303: Pull complete
+5   : ┆ ┆ ┆ [1m21s] | 68dc2e3a0a92: Pull complete
+5   : ┆ ┆ ┆ [1m21s] | b1ce16724c32: Pull complete
+5   : ┆ ┆ ┆ [1m21s] | 0ef0262b9cb5: Verifying Checksum
+5   : ┆ ┆ ┆ [1m21s] | 0ef0262b9cb5: Download complete
+5   : ┆ ┆ ┆ [1m21s] | 862ab9ed753a: Verifying Checksum
+5   : ┆ ┆ ┆ [1m21s] | 862ab9ed753a: Download complete
+5   : ┆ ┆ ┆ [1m21s] | a32c0bec3734: Verifying Checksum
+5   : ┆ ┆ ┆ [1m21s] | a32c0bec3734: Download complete
+5   : ┆ ┆ ┆ [1m22s] | e4a89674f7a0: Pull complete
+5   : ┆ ┆ ┆ [1m22s] | 63e9bd9d6dc4: Pull complete
+5   : ┆ ┆ ┆ [1m23s] | 2726a37e8e68: Pull complete
+5   : ┆ ┆ ┆ [1m23s] | 242e241769f0: Pull complete
+5   : ┆ ┆ ┆ [1m24s] | 0ef0262b9cb5: Pull complete
+5   : ┆ ┆ ┆ [1m24s] | bfdfd57d1642: Verifying Checksum
+5   : ┆ ┆ ┆ [1m24s] | bfdfd57d1642: Download complete
+5   : ┆ ┆ ┆ [1m24s] | 7dd90edbcd27: Verifying Checksum
+5   : ┆ ┆ ┆ [1m24s] | 7dd90edbcd27: Download complete
+5   : ┆ ┆ ┆ [1m24s] | 862ab9ed753a: Pull complete
+5   : ┆ ┆ ┆ [1m25s] | 51fecc4163b1: Verifying Checksum
+5   : ┆ ┆ ┆ [1m25s] | 51fecc4163b1: Download complete
+5   : ┆ ┆ ┆ [1m26s] | a32c0bec3734: Pull complete
+5   : ┆ ┆ ┆ [1m26s] | 7b82ef34ccf9: Verifying Checksum
+5   : ┆ ┆ ┆ [1m26s] | 7b82ef34ccf9: Download complete
+5   : ┆ ┆ ┆ [1m27s] | 02b8253c97dd: Verifying Checksum
+5   : ┆ ┆ ┆ [1m27s] | 02b8253c97dd: Download complete
+5   : ┆ ┆ ┆ [1m27s] | 7dd90edbcd27: Pull complete
+5   : ┆ ┆ ┆ [1m27s] | 292c55ab2284: Verifying Checksum
+5   : ┆ ┆ ┆ [1m27s] | 292c55ab2284: Download complete
+5   : ┆ ┆ ┆ [1m28s] | bfdfd57d1642: Pull complete
+5   : ┆ ┆ ┆ [1m28s] | 51fecc4163b1: Pull complete
+5   : ┆ ┆ ┆ [1m29s] | 292c55ab2284: Pull complete
+5   : ┆ ┆ ┆ [1m30s] | 7b82ef34ccf9: Pull complete
+5   : ┆ ┆ ┆ [1m30s] | 02b8253c97dd: Pull complete
+5   : ┆ ┆ ┆ [1m32s] | bf3b5050a95a: Verifying Checksum
+5   : ┆ ┆ ┆ [1m32s] | bf3b5050a95a: Download complete
+5   : ┆ ┆ ┆ [1m34s] | 42e45b79dc65: Verifying Checksum
+5   : ┆ ┆ ┆ [1m34s] | 42e45b79dc65: Download complete
+5   : ┆ ┆ ┆ [1m35s] | 62f05d791015: Verifying Checksum
+5   : ┆ ┆ ┆ [1m35s] | 62f05d791015: Download complete
+5   : ┆ ┆ ┆ [1m35s] | f59a505a6386: Verifying Checksum
+5   : ┆ ┆ ┆ [1m35s] | f59a505a6386: Download complete
+5   : ┆ ┆ ┆ [1m36s] | 0202c85c965d: Verifying Checksum
+5   : ┆ ┆ ┆ [1m36s] | 0202c85c965d: Download complete
+5   : ┆ ┆ ┆ [1m38s] | 8822f3a11e4c: Verifying Checksum
+5   : ┆ ┆ ┆ [1m38s] | 8822f3a11e4c: Download complete
+5   : ┆ ┆ ┆ [1m46s] | a3522b9567bb: Verifying Checksum
+5   : ┆ ┆ ┆ [1m46s] | a3522b9567bb: Download complete
+5   : ┆ ┆ ┆ [1m50s] | a3522b9567bb: Pull complete
+5   : ┆ ┆ ┆ [1m50s] | bf3b5050a95a: Pull complete
+5   : ┆ ┆ ┆ [1m51s] | 62f05d791015: Pull complete
+5   : ┆ ┆ ┆ [1m51s] | 42e45b79dc65: Pull complete
+5   : ┆ ┆ ┆ [1m52s] | f59a505a6386: Pull complete
+5   : ┆ ┆ ┆ [1m52s] | 0202c85c965d: Pull complete
+5   : ┆ ┆ ┆ exec docker pull registry.dagger.io/engine:v0.21.11 DONE [1m53s]
+6   : ┆ ┆ ┆ exec docker run --name dagger-engine-v0.21.11 -d --restart always -v /var/lib/dagger --privileged registry.dagger.io/engine:v0.21.11 --debug --debugaddr 127.0.0.1:6060
+5   : ┆ ┆ ┆ exec docker pull registry.dagger.io/engine:v0.21.11 DONE [1m53s]
+5   : ┆ ┆ ┆ [1m53s] | 8822f3a11e4c: Pull complete
+5   : ┆ ┆ ┆ [1m53s] | Digest: sha256:6b557cc8b5fdfee0e2e8c82d451ac922097a1255482143e1b96c0be3ff2a303c
+5   : ┆ ┆ ┆ [1m53s] | Status: Downloaded newer image for registry.dagger.io/engine:v0.21.11
+5   : ┆ ┆ ┆ [1m53s] | registry.dagger.io/engine:v0.21.11
+6   : ┆ ┆ ┆ exec docker run --name dagger-engine-v0.21.11 -d --restart always -v /var/lib/dagger --privileged registry.dagger.io/engine:v0.21.11 --debug --debugaddr 127.0.0.1:6060
+6   : ┆ ┆ ┆ [1.0s] | WARNING: IPv4 forwarding is disabled. Networking will not work.
+6   : ┆ ┆ ┆ [1.0s] | 41a73497d2d102967eaa290407621e31505c4c32a78407bf22e9dec252ccb359
+6   : ┆ ┆ ┆ [1.3s] | docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error spawning mount remapping thread: mount source thread: join container mntns: setns: operation not permitted
+6   : ┆ ┆ ┆ [1.3s] | 
+6   : ┆ ┆ ┆ [1.3s] | Run 'docker run --help' for more information
+6   : ┆ ┆ ┆ exec docker run --name dagger-engine-v0.21.11 -d --restart always -v /var/lib/dagger --privileged registry.dagger.io/engine:v0.21.11 --debug --debugaddr 127.0.0.1:6060 ERROR [1.3s]
+6   : ┆ ┆ ┆ ! failed to run command [docker run --name dagger-engine-v0.21.11 -d --restart always -v /var/lib/dagger --privileged registry.dagger.io/engine:v0.21.11 --debug --debugaddr 127.0.0.1:6060]: exit status 125
+3   : ┆ ┆ create container DONE [1m55s]
+2   : ┆ starting engine DONE [1m55s]
+7   : ┆ connecting to engine
+exit: 124

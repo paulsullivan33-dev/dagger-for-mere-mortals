@@ -1,0 +1,11 @@
+$ python3 -m unittest -v
+test_empty (test_wordcount.CountTests.test_empty) ... ok
+test_one_line (test_wordcount.CountTests.test_one_line) ... ok
+test_two_lines (test_wordcount.CountTests.test_two_lines) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+$ python3 wordcount.py sample.txt
+2 9 44 sample.txt

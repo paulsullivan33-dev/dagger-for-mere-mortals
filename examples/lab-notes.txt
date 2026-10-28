@@ -1,0 +1,53 @@
+The lab — one real CLI, one engine that could not start
+====================================================================
+
+The lab is Dagger as the project ships it,
+on the build machine (an Ubuntu 24.04
+sandbox):
+
+  * Dagger CLI v0.21.11, the official
+    release tarball for linux/amd64 from
+    the project's GitHub releases, verified
+    against the project's published
+    checksums.txt (sha256sum: OK) before
+    unpacking. Kept in a scratch folder,
+    never installed system-wide.
+  * Docker 29.1.3 was present as a client
+    with no daemon running. The lab
+    started the daemon itself, with the
+    settings the sandbox tolerates (vfs
+    storage driver, no bridge networking,
+    no iptables). In that state Docker
+    could pull images and create
+    containers, and could not start one:
+    the sandbox kernel answers the setns
+    operation runc needs with "operation
+    not permitted" — for hello-world and
+    for the Dagger engine alike.
+  * The engine's arrival was therefore
+    observed in full and completed by no
+    one: `dagger core version` pulled
+    registry.dagger.io/engine:v0.21.11
+    (about 650 MB, 1m53s on this storage),
+    ran the documented privileged
+    `docker run` for dagger-engine-v0.21.11,
+    got exit status 125 from the failed
+    start, and waited at "connecting to
+    engine" until stopped at 280 s. The
+    complete record is transcript t90.
+  * Everything the lab claims as run is a
+    CLI surface (version, help, completion,
+    checksums), an engine-start attempt,
+    or plain Python: the sample project's
+    tests, run directly, 3 of 3 passing.
+  * The example module in
+    dagger-lab/module/ was written by hand
+    to the project's documented Python SDK
+    pattern because `dagger init` — which
+    needs the engine even to scaffold —
+    could not run. It is syntax-checked
+    only. It has never been executed, and
+    the guide never presents it as run.
+  * Telemetry was disabled for the lab's
+    runs (DAGGER_TELEMETRY_DISABLE=1). No
+    Dagger Cloud account was used.

@@ -1,0 +1,2 @@
+$ dagger version
+dagger v0.21.11 (image://registry.dagger.io/engine:v0.21.11) linux/amd64
